@@ -19,7 +19,7 @@ async function fetchUsers() {
 
   return (
     <main className="App">
-      <h1>My first react app</h1>
+      <h1>Hi users</h1>
       <User name="Agnes" mail="bla@bla" />
       <User name="Mathias" mail="fla@fla" />
       <section className="grid">
