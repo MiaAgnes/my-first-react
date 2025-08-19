@@ -1,6 +1,7 @@
+import User from './components/user'; // Add this line
 import { useEffect, useState } from 'react';
 import './App.css'
-import User from './components/user'; 
+import Counter from './components/counter';
 
 function App() {
 const [users, setUsers] = useState([{name: "Agnes", mail: "bla@bla"}]);
@@ -12,14 +13,15 @@ useEffect(() => {
 }, []);
 
 async function fetchUsers() {
-  const response = await fetch('https://jsonplaceholder.typicohttps://raw.githubusercontent.com/cederdorff/race/master/data/users.json de.com/users');
+  const response = await fetch('https://raw.githubusercontent.com/cederdorff/race/master/data/users.json');
   const data = await response.json();
   setUsers(data);
 }
 
-  return (
+ return (
     <main className="App">
       <h1>Hi users</h1>
+      <Counter />
       <User name="Agnes" mail="bla@bla" />
       <User name="Mathias" mail="fla@fla" />
       <section className="grid">
